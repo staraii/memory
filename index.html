@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header-score-board hide">
+        <p class="p-score">
+            <span class="span-score-left">SCORE</span>
+            <span class="span-score-right">SCORE</span>
+        </p>
+        <section class="section-score-board">
+            <span class="player-scores">0</span>
+            
+            <span class="player-names">Name 1</span>
+
+            <span class="span-vs">VS</span>
+
+            <span class="player-names">Name 2</span>
+
+
+            <span class="player-scores">0</span>
+
+
+
+        </section>
+        
+
+    </header>
+
+
+    <main>
+
+        <section class="game-menu">
+
+
+            <article class="game-menu-pick">
+                <h1>FRONTEND MEMORY</h1>
+                <button type="button" class="btn-1vs1">
+                    1 vs 1
+                </button>
+                <button type="button" class="btn-machine">MAN VS MACHINE</button>
+            </article>
+
+
+            <article class="game-menu-players hide">
+                <form class="players-form">
+                    <legend>1 VS 1</legend>
+                
+                    <label for="inputPlayerOneForm">PLAYER 1:</label>
+                    <input type="text" required minlength="1" class="input-player-1" id="inputPlayerOneForm">
+                    <label for="inputPlayerTwoForm">PLAYER 2:</label>
+                    <input type="text" required minlength="1" class="input-player-2" id="inputPlayerTwoForm">
+                    <span class="span-radio-labels">
+                        <label for="selectPairs1" class="radio-label">12 PAIRS</label>
+                        <label for="selectPairs2" class="radio-label">16 PAIRS</label>
+                        <label for="selectPairs3" class="radio-label">20 PAIRS</label>
+                    </span>
+                    <span class="span-radio-buttons">
+                        <input type="radio" name="selectPairs" id="selectPairs1" value="12" checked>
+                        <input type="radio" name="selectPairs" id="selectPairs2" value="16">
+                        <input type="radio" name="selectPairs" id="selectPairs3" value="20">
+                    </span>
+                    </form>
+                    <button type="button" class="btn-start-two-players">START GAME</button>
+                </form>
+            </article>
+
+        </section>
+
+
+
+
+        <section class="game-board hide">
+
+
+          
+        </section>
+
+        
+        <section class="game-end hide">
+            <h1 class="h1-game-result">End of Game</h1>
+            <h3 class="h3-game-result-1"></h3>
+            <h3 class="h3-game-result-2"></h3>
+            <ul>
+                <li class="li-hs">High Score:</li>
+                <li class="li-hs"><span class="span-hs-players"> </span><span class="span-hs-scores"> </span></li>
+                <li class="li-hs"><span class="span-hs-players"> </span><span class="span-hs-scores"> </span></li>
+                <li class="li-hs"><span class="span-hs-players"> </span><span class="span-hs-scores"> </span></li>
+            </ul>
+            <button type="button" class="btn-reset">Reset game</button>
+        </section>
+
+    
+
+    </main>
+</body>
+</html>

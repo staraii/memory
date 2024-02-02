@@ -1,0 +1,337 @@
+:root {
+    --my-font: calc(15px + 0.390625vw);
+    --my-padding: calc(8px + 1.5625vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--my-font);
+}
+
+body {
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: var(--my-font);
+}
+
+.header-score-board {
+    background-color: #c9c9c9;
+    opacity: 0.6;
+    width: 100%;
+    height: 10%;
+    min-height: 4rem;
+    box-shadow: 0rem 0rem 0.5rem 0.3rem #282828;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.p-score {
+    width: 100%;
+    padding: 0;
+}
+
+.span-score-left {
+    width: 20%;
+    float: inline-start;
+    margin-top: 0.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.span-score-right {
+    width: 20%;
+    float: inline-end;
+    margin-top: 0.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.section-score-board {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.player-scores {
+    width: 20%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.player-names {
+    width: 20%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.span-vs {
+    width: 20%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+
+}
+
+.game-menu {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c9c9c9;
+    padding: var(--my-padding);
+    opacity: 0.6;
+    box-shadow: 0rem 0rem 0.5rem 0.3rem #6d6d6d;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.game-menu-pick {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;  
+    gap: 2rem;
+}
+
+.game-menu-players {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;  
+    gap: 2rem;
+}
+
+
+.game-menu button {
+    background-color: #333333;
+    width: 80%;
+    
+    font-family: 'Open Sans', sans-serif;
+    color: #c9c9c9;
+    
+    padding: var(--my-padding);
+    font-size: 1rem;
+
+}
+
+main section article h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #282828;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.players-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.players-form legend {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #262626;
+}
+
+.players-form input[type="text"] {
+    width: 100%;
+    height: 2rem;
+ 
+   
+}
+.players-form label {
+    align-self: flex-start;
+
+}
+
+.span-radio-buttons input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 2% 15% 2% 15%;
+    transform: scale(1.5);
+}
+
+.span-radio-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+
+}
+.span-radio-labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.span-radio-labels label {
+    width: 30%;
+    text-align: center;
+}
+
+
+.game-board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    perspective: 600px;
+    padding: 2vw;
+    gap: 2vw;
+}
+
+.card {
+    width: 7.8vw;
+    height: 7.8vw;
+    border-radius: 3%;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem #282828;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform .2s;
+}
+
+.card-front {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    background-color: #6d6d6d;
+    color: #262626;
+
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+    backface-visibility: hidden;
+}
+
+.card .card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-back {
+    background: linear-gradient(#282828, #161616);
+}
+
+.game-end {
+    margin: 20vh auto;
+    width: 50vw;
+    height: 50vh;
+    background-color: #6d6d6d;
+    color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.h1-game-result {
+    color: #282828;
+    font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+.h3-game-result-1 {
+    color: #282828;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.h3-game-result-2 {
+    color: #3d3d3d;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+ul {
+    width: 80%;
+    list-style: none;
+}
+
+.li-hs {
+    width: 100%;
+    color: #282828;
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+.span-hs-players {
+    width: 20vw;
+    color: #282828;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    float: left;
+}
+.span-hs-scores {
+    width: 20vw;
+    color: #282828;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    float: right;
+}
+.highscore-marked {
+    font-weight: 800;
+    background-color: #474747;
+}
+
+.btn-reset {
+    width: 80%;
+    height: 15%;
+    background-color: #333333;
+    color: #949494;
+}
+
+.hide {
+    display: none;
+}    
